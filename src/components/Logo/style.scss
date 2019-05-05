@@ -1,0 +1,19 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  height: 50px;
+  fill: $black;
+}
+
+.logo-title {
+  display: inline-block;
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: $black;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
