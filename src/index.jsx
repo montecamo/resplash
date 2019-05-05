@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { render } from 'react-dom';
 
+import '@/styles';
+
 import Router from '@/router';
 
-const App = () => (
-  <Router />
-);
+const App = () => <Router />;
 
 export default App;
 
