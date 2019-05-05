@@ -1,0 +1,13 @@
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  margin-right: 40px;
+}
+.photo-column:last-child {
+  margin-right: 0;
+}
+
+.photo {
+  margin-bottom: 40px;
+}

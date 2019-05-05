@@ -1,9 +1,11 @@
 import React from 'react';
 
-import style from './style';
+import PhotoGrid from '@/components/PhotoGrid';
 
 import TopBar from './TopBar';
 import Header from './Header';
+
+import style from './style';
 
 const Home = () => {
   return (
@@ -12,6 +14,7 @@ const Home = () => {
       <div className={style.main}>
         <TopBar />
         <Header />
+        <PhotoGrid className={style['photo-grid-master']} />
       </div>
     </div>
   );

@@ -1,0 +1,16 @@
+.grid-controller {
+  margin-bottom: 55px;
+}
+
+.photo-grid__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
