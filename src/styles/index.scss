@@ -1,1 +1,11 @@
 @import 'normalize/import-now';
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $background;
+  height: auto;
+  min-height: 100%;
+}
