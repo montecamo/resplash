@@ -6,7 +6,9 @@ import style from './style';
 const TopBar = () => {
   return (
     <div className={style.container}>
-      <h3 className={style.credentials}>Made by Montecamo</h3>
+      <Link to="/" className={style.credentials}>
+        Made by Montecamo
+      </Link>
       <div className={style['auth-actions']}>
         <Link className={style['auth-action']} to="/login">
           Login
