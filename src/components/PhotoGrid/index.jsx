@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import c from 'classnames';
 
 import PhotoColumn from './PhotoColumn';
 import GridController from './GridController';
@@ -8,7 +8,7 @@ import GridController from './GridController';
 import style from './style';
 
 const PhotoGrid = props => (
-  <div className={classNames([style['photo-grid__wrapper'], props.className])}>
+  <div className={c([style['photo-grid__wrapper'], props.className])}>
     <GridController className={style['grid-controller']} />
     <div className={style['photo-grid']}>
       {props.photos.map((photos, i) => (

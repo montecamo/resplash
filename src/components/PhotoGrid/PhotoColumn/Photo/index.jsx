@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import c from 'classnames';
 
 import style from './style';
 
 const Photo = props => (
-  <img className={classNames([style.photo, props.className])} src={props.src} />
+  <img className={c([style.photo, props.className])} src={props.src} />
 );
 
 Photo.propTypes = {
