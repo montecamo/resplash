@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.credentials {
+  color: $lightgrey;
+  opacity: 0.8;
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.auth-actions {
+  position: absolute;
+  right: 0;
+}
+
+.auth-action {
+  color: $lightgrey;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.auth-action:first-child {
+  margin-right: 40px;
+}

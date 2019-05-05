@@ -1,8 +1,18 @@
-
 import React from 'react';
 
-const Main = () => (
-  <span>Hello world</span>
-);
+import style from './style';
 
-export default Main;
+import TopBar from './TopBar';
+
+const Home = () => {
+  return (
+    <div>
+      <div className={style['background']} />
+      <div className={style.main}>
+        <TopBar />
+      </div>
+    </div>
+  );
+};
+
+export default Home;
