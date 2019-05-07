@@ -7,8 +7,8 @@ import Photo from './Photo';
 
 const PhotoColumn = props => (
   <div className={style['photo-column']}>
-    {props.photos.map(src => (
-      <Photo className={style.photo} key={src} src={src} />
+    {props.photos.map(photo => (
+      <Photo className={style.photo} key={photo.id} src={photo.urls.regular} />
     ))}
   </div>
 );
