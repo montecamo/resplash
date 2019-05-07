@@ -6,7 +6,7 @@ import style from './style';
 import Photo from './Photo';
 
 const PhotoColumn = props => (
-  <div className={style['photo-column']}>
+  <div style={{ width: props.width }} className={style['photo-column']}>
     {props.photos.map(photo => (
       <Photo className={style.photo} key={photo.id} src={photo.urls.regular} />
     ))}
@@ -15,10 +15,12 @@ const PhotoColumn = props => (
 
 PhotoColumn.propTypes = {
   photos: PropTypes.array,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 PhotoColumn.defaultProps = {
   photos: [],
+  width: 'auto',
 };
 
 export default PhotoColumn;

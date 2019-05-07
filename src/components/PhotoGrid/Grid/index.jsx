@@ -8,18 +8,24 @@ import PhotoColumn from './PhotoColumn';
 
 import style from './style';
 
+const getColumnWidth = rows => `${+(100 / rows).toFixed(2)}%`;
+
 const Grid = props => {
   return (
     <div className={style['photo-grid']}>
-      {props.photos.map((photos, i) => (
-        <PhotoColumn key={i} photos={photos} />
+      {props.photoColumns.map((photos, i) => (
+        <PhotoColumn
+          width={getColumnWidth(props.photoColumns.length)}
+          key={i}
+          photos={photos}
+        />
       ))}
     </div>
   );
 };
 
 Grid.propTypes = {
-  photos: PropTypes.array,
+  photoColumns: PropTypes.array,
   className: PropTypes.string,
 };
 
@@ -39,7 +45,7 @@ const WrappedGrid = graphql(GET_PHOTOS, {
     const { photos = [] } = props.data;
 
     return {
-      photos: sortPhotos(photos, props.ownProps.rows),
+      photoColumns: sortPhotos(photos, props.ownProps.rows),
     };
   },
 })(Grid);
