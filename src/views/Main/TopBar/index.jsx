@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+
+import { HOME_ROUTE } from '@/constants';
 
 import style from './style';
 
 const TopBar = () => {
   return (
     <div className={style.container}>
-      <Link to="/" className={style.credentials}>
-        Made by Montecamo
-      </Link>
+      <Route
+        exact
+        path={HOME_ROUTE}
+        render={() => (
+          <Link to="/" className={style.credentials}>
+            Made by Montecamo
+          </Link>
+        )}
+      />
       <div className={style['auth-actions']}>
         <Link className={style['auth-action']} to="/login">
           Login

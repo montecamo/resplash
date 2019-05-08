@@ -1,16 +1,15 @@
-
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
 
-import Home from '@/views/Home';
+import { HOME_ROUTE, USER_ROUTE } from '@/constants';
+import Main from '@/views/Main';
 
 const Router = () => (
   <BrowserRouter>
-    <Route
-      exact
-      path="/"
-      component={Home}
-    />
+    <Switch>
+      <Route path={USER_ROUTE} component={Main} />
+      <Route path={HOME_ROUTE} component={Main} />
+    </Switch>
   </BrowserRouter>
 );
 

@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.header-slogan {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.header-subscribe {
+  background: $grey;
+  color: $white;
+  padding: 14px 49px;
+  font-size: 14px;
+  margin-top: 17px;
+  border: 0;
+}

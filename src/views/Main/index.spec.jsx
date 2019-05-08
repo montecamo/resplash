@@ -4,8 +4,8 @@ import 'react-testing-library/cleanup-after-each';
 
 import React from 'react';
 
-import Home from './index.jsx';
+import Main from './index.jsx.js';
 
 test('renders successfully', () => {
-  render(<Home />);
+  render(<Main />);
 });
