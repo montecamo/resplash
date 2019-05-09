@@ -5,11 +5,12 @@ import c from 'classnames';
 import style from './style.scss';
 
 const UserNavBar = props => {
-  const [selected] = useState(props.initialSelected);
+  const [selected, selectItem] = useState(props.initialSelected);
 
   return (
     <div className={c([style['user-navbar'], props.className])}>
       <button
+        onClick={() => selectItem(0)}
         className={c({
           [style['navbar-item']]: true,
           [style.selected]: selected === 0,
@@ -18,6 +19,7 @@ const UserNavBar = props => {
         Photos
       </button>
       <button
+        onClick={() => selectItem(1)}
         className={c({
           [style['navbar-item']]: true,
           [style.selected]: selected === 1,
@@ -26,6 +28,7 @@ const UserNavBar = props => {
         Liked
       </button>
       <button
+        onClick={() => selectItem(2)}
         className={c({
           [style['navbar-item']]: true,
           [style.selected]: selected === 2,
