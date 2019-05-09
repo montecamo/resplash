@@ -4,38 +4,25 @@ import c from 'classnames';
 
 import style from './style.scss';
 
+const navbarItems = ['Photos', 'Liked', 'Collections'];
+
 const UserNavBar = props => {
   const [selected, selectItem] = useState(props.initialSelected);
 
   return (
     <div className={c([style['user-navbar'], props.className])}>
-      <button
-        onClick={() => selectItem(0)}
-        className={c({
-          [style['navbar-item']]: true,
-          [style.selected]: selected === 0,
-        })}
-      >
-        Photos
-      </button>
-      <button
-        onClick={() => selectItem(1)}
-        className={c({
-          [style['navbar-item']]: true,
-          [style.selected]: selected === 1,
-        })}
-      >
-        Liked
-      </button>
-      <button
-        onClick={() => selectItem(2)}
-        className={c({
-          [style['navbar-item']]: true,
-          [style.selected]: selected === 2,
-        })}
-      >
-        Collections
-      </button>
+      {navbarItems.map((itemName, i) => (
+        <button
+          key={i}
+          onClick={() => selectItem(i)}
+          className={c({
+            [style['navbar-item']]: true,
+            [style.selected]: selected === i,
+          })}
+        >
+          {itemName}
+        </button>
+      ))}
     </div>
   );
 };
