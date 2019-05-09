@@ -1,0 +1,24 @@
+$navbar-item-width: 140px;
+$navbar-item-height: 50px;
+
+.user-navbar {
+  display: flex;
+  width: 100%;
+}
+
+.navbar-item {
+  color: $darkgrey;
+  font-weight: normal;
+  font-size: 20px;
+
+  height: $navbar-item-height;
+  width: $navbar-item-width;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  font-weight: bold;
+}

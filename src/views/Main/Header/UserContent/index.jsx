@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import style from './style';
 
 import Avatar from '@/components/Avatar';
+import NavBar from './NavBar';
 
 const UserContent = ({ avatar, name, website }) => {
   return (
@@ -13,6 +14,7 @@ const UserContent = ({ avatar, name, website }) => {
         <h2 className={style.name}>{name}</h2>
         <h3 className={style.website}>{website}</h3>
       </div>
+      <NavBar className={style['user-navbar-master']} />
     </div>
   );
 };
