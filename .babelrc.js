@@ -5,5 +5,8 @@ module.exports = {
     ['@babel/preset-env', { modules: isTest ? 'commonjs' : false }],
     '@babel/preset-react',
   ],
-  plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
+  plugins: [
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+  ],
 };
