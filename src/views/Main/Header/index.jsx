@@ -8,7 +8,7 @@ import Search from './Search';
 import HomeContent from './HomeContent';
 import UserContent from './UserContent';
 
-import style from './style';
+import style from './style.scss';
 
 const Header = () => {
   return (

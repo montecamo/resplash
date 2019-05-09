@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import c from 'classnames';
 
-import style from './style';
+import style from './style.scss';
 
 const GridController = props => (
   <div className={c([style['grid-controller'], props.className])}>

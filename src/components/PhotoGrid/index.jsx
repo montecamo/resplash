@@ -5,7 +5,7 @@ import c from 'classnames';
 import GridController from './GridController';
 import Grid from './Grid';
 
-import style from './style';
+import style from './style.scss';
 
 const PhotoGrid = props => (
   <div className={c([style['photo-grid__wrapper'], props.className])}>

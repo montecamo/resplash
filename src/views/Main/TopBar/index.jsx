@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 
 import { HOME_ROUTE } from '@/constants';
 
-import style from './style';
+import style from './style.scss';
 
 const TopBar = () => {
   return (

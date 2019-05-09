@@ -7,5 +7,5 @@ import React from 'react';
 import Photo from './index.jsx';
 
 test('renders successfully', () => {
-  render(<Photo />);
+  render(<Photo src="" />);
 });

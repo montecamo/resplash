@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './style';
+import style from './style.scss';
 
 import Logo from '@/components/Logo';
 

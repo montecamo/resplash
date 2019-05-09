@@ -6,7 +6,7 @@ import { graphql } from 'react-apollo';
 import { sortPhotos } from '@/utils';
 import PhotoColumn from './PhotoColumn';
 
-import style from './style';
+import style from './style.scss';
 
 const getColumnWidth = rows => `${+(100 / rows).toFixed(2)}%`;
 

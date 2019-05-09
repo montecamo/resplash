@@ -5,7 +5,7 @@ import PhotoGrid from '@/components/PhotoGrid';
 import TopBar from './TopBar';
 import Header from './Header';
 
-import style from './style';
+import style from './style.scss';
 
 const Home = () => {
   return (
