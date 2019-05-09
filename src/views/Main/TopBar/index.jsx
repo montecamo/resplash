@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Route, Link } from 'react-router-dom';
 
 import { HOME_ROUTE } from '@/constants';
 
 import style from './style.scss';
 
-const TopBar = () => {
+const TopBar = props => {
+  const [selected, selectItem] = useState();
   return (
     <div className={style.container}>
       <Route
@@ -27,6 +29,14 @@ const TopBar = () => {
       </div>
     </div>
   );
+};
+
+TopBar.propTypes = {
+  initialSelected: PropTypes.number,
+};
+
+TopBar.defaultProps = {
+  initialSelected: 0,
 };
 
 export default TopBar;
