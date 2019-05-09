@@ -7,6 +7,9 @@ $navbar-item-height: 50px;
 }
 
 .navbar-item {
+  background: transparent;
+  outline: none;
+  border: 0;
   color: $darkgrey;
   font-weight: normal;
   font-size: 20px;
