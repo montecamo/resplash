@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import c from 'classnames';
 
+import Underline from './Underline';
+
 import style from './style.scss';
+
+const NAVBAR_ITEM_WIDTH = 140;
 
 const navbarItems = ['Photos', 'Liked', 'Collections'];
 
@@ -23,6 +27,11 @@ const UserNavBar = props => {
           {itemName}
         </button>
       ))}
+      <Underline
+        className={style['navbar-underline-master']}
+        itemWidth={NAVBAR_ITEM_WIDTH}
+        selectedItem={selected}
+      />
     </div>
   );
 };

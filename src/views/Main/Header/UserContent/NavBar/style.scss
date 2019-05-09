@@ -1,8 +1,6 @@
-$navbar-item-width: 140px;
-$navbar-item-height: 50px;
-
 .user-navbar {
   display: flex;
+  position: relative;
   width: 100%;
 }
 
@@ -14,8 +12,8 @@ $navbar-item-height: 50px;
   font-weight: normal;
   font-size: 20px;
 
-  height: $navbar-item-height;
-  width: $navbar-item-width;
+  height: $user-navbar-item-height;
+  width: $user-navbar-item-width;
 
   display: flex;
   justify-content: center;
@@ -24,4 +22,10 @@ $navbar-item-height: 50px;
 
 .selected {
   font-weight: bold;
+}
+
+.navbar-underline-master {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }

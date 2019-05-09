@@ -1,0 +1,9 @@
+.navbar-underline-container {
+  width: 100%;
+}
+
+.navbar-underline {
+  height: 3px;
+  width: $user-navbar-item-width;
+  background: $darkgrey;
+}
