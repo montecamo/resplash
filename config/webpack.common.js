@@ -55,7 +55,10 @@ let config = {
             {
               loader: 'sass-loader',
               options: {
-                data: '@import "colors";',
+                data: `
+                  @import "colors";
+                  @import "variables";
+                `,
                 includePaths: ['src/styles'],
               },
             },

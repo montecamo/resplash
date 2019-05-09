@@ -15,8 +15,8 @@ const Header = () => {
     <div className={style.container}>
       <Menu />
       <Switch>
-        <Route path={USER_ROUTE} component={HomeContent} />
-        <Route path={HOME_ROUTE} component={UserContent} />
+        <Route path={USER_ROUTE} component={UserContent} />
+        <Route path={HOME_ROUTE} component={HomeContent} />
       </Switch>
       <Search />
     </div>

@@ -1,2 +1,2 @@
 export const HOME_ROUTE = '/';
-export const USER_ROUTE = '/user/:id';
+export const USER_ROUTE = '/user';

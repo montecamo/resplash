@@ -1,20 +1,26 @@
-.header {
+.user-header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: -($avatar-size / 2);
 }
 
-.header-slogan {
+.description {
   margin-top: 20px;
-  font-size: 17px;
+  text-align: center;
 }
 
-.header-subscribe {
-  background: $grey;
-  color: $white;
-  padding: 14px 49px;
-  font-size: 14px;
-  margin-top: 17px;
-  border: 0;
+.name,
+.website {
+  font-weight: normal;
+}
+
+.name {
+  color: $darkgrey;
+  margin-bottom: 0;
+}
+
+.website {
+  margin-top: 10px;
+  color: $lightgrey;
 }

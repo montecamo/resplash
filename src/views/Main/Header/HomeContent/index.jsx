@@ -6,7 +6,7 @@ import Logo from '@/components/Logo';
 
 const HomeContent = () => {
   return (
-    <div className={style.header}>
+    <div className={style['home-header']}>
       <Logo />
       <p className={style['header-slogan']}>
         Free high-resolution photos every 10 days
