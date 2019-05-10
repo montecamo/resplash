@@ -12,4 +12,6 @@ class Overlays {
   };
 }
 
-export default Overlays;
+const OverlaysStore = new Overlays();
+
+export default OverlaysStore;

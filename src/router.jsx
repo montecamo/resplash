@@ -11,11 +11,11 @@ import OverlaysStore from '@/stores/overlays';
 const Router = () => (
   <BrowserRouter>
     <>
-      <Overlays overlaysStore={new OverlaysStore()} />
       <Switch>
         <Route path={USER_ROUTE} component={Main} />
         <Route path={HOME_ROUTE} component={Main} />
       </Switch>
+      <Overlays overlaysStore={OverlaysStore} />
     </>
   </BrowserRouter>
 );

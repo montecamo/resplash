@@ -1,6 +1,10 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 
+import { SIDEBAR_OVERLAY } from '@/constants';
+
+import Sidebar from './Sidebar';
+
 const Overlays = observer(({ overlaysStore, overlaysResolver }) => (
   <>
     {overlaysStore.overlays.map(overlay => {
@@ -17,7 +21,7 @@ const Overlays = observer(({ overlaysStore, overlaysResolver }) => (
 ));
 
 Overlays.defaultProps = {
-  overlaysResolver: {},
+  overlaysResolver: { [SIDEBAR_OVERLAY]: Sidebar },
 };
 
 export default Overlays;
