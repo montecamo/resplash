@@ -14,6 +14,31 @@
   top: 0;
   bottom: 0;
 
-  width: 200px;
+  padding-top: 45px;
+  width: 320px;
   background: $darkgrey;
+
+  display: flex;
+  flex-direction: column;
+  --base-padding: 40px;
+}
+
+.close {
+  margin-left: auto;
+  margin-right: 35px;
+  background: transparent;
+  border: 0;
+  color: $white;
+}
+
+.profile-master {
+  padding-left: var(--base-padding);
+  margin-top: 30px;
+}
+
+.navigation-master {
+  margin-top: 40px;
+}
+.navigation-master:first-child {
+  margin-top: 25px;
 }

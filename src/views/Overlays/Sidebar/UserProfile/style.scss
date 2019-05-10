@@ -1,0 +1,34 @@
+.user-profile {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.avatar-master {
+  height: 50px;
+  width: 50px;
+
+  margin-right: 20px;
+}
+
+.user-info {
+  display: flex;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.username {
+  color: $lightgrey;
+  margin-bottom: 5px;
+}
+
+.logout {
+  outline: none;
+  background: none;
+  border: 0;
+  padding: 0;
+
+  color: $white;
+}

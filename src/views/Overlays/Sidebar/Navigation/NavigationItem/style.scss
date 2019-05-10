@@ -1,0 +1,15 @@
+.navigation-item {
+  height: 54px;
+  color: $white;
+  font-size: 18px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  padding: 0 var(--base-padding);
+}
+
+.selected {
+  font-weight: bold;
+  background: $lightgrey;
+}
