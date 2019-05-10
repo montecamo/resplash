@@ -6,8 +6,6 @@ import { HOME_ROUTE, USER_ROUTE } from '@/constants';
 import Main from '@/views/Main';
 import Overlays from '@/views/Overlays';
 
-import OverlaysStore from '@/stores/overlays';
-
 const Router = () => (
   <BrowserRouter>
     <>
@@ -15,7 +13,7 @@ const Router = () => (
         <Route path={USER_ROUTE} component={Main} />
         <Route path={HOME_ROUTE} component={Main} />
       </Switch>
-      <Overlays overlaysStore={OverlaysStore} />
+      <Overlays />
     </>
   </BrowserRouter>
 );

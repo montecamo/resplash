@@ -1,23 +1,35 @@
 import { renderWithProviders } from '@/testUtils';
+import { render } from 'react-testing-library';
+
+import { ApolloProvider } from 'react-apollo';
+import client, { cache } from '@/apollo';
 
 import React from 'react';
 
 import Overlays from './index';
-import OverlaysStore from '@/stores/overlays';
+
+test('renders successfully', () => {
+  renderWithProviders(<Overlays />);
+});
 
 test('resolves component by id correctly', () => {
   const testId = 'mocked-div';
+  const overlayId = 'mockedOverlay';
+
+  cache.writeData({
+    data: {
+      overlays: [{ id: overlayId, __typename: 'Overlay' }],
+    },
+  });
+
   const ComponentMock = () => <div data-testid={testId} />;
-  const overlaysResolver = { mockedOverlay: ComponentMock };
-  const { queryByTestId } = renderWithProviders(
-    <Overlays
-      overlaysStore={OverlaysStore}
-      overlaysResolver={overlaysResolver}
-    />,
+
+  const overlaysResolver = { [overlayId]: ComponentMock };
+  const { queryByTestId } = render(
+    <ApolloProvider client={client}>
+      <Overlays overlaysResolver={overlaysResolver} />
+    </ApolloProvider>,
   );
 
-  OverlaysStore.openOverlay('mockedOverlay');
   expect(queryByTestId(testId)).toBeTruthy();
-  OverlaysStore.closeOverlay('mockedOverlay');
-  expect(queryByTestId(testId)).toBeFalsy();
 });
