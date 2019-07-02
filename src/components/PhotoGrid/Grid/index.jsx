@@ -33,6 +33,7 @@ const GET_PHOTOS = gql`
   {
     photos {
       id
+      height
       urls {
         regular
       }

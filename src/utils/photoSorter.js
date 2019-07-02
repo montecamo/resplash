@@ -1,16 +1,29 @@
+const getMinColumn = heights => {
+  const minHeight = Math.min(...heights);
+
+  return heights.findIndex(len => len === minHeight);
+};
+
 export const sortPhotos = (photos, number = 3) => {
-  const grouped = [];
-  let index;
+  photos = photos.slice(0, 9);
+  console.warn(photos);
+  const columns = [];
+  const heights = [];
+  let currentIndex;
 
   photos.forEach((photo, i) => {
-    index = i % number;
+    currentIndex = i % number;
 
-    if (!grouped[index]) {
-      grouped[index] = [];
+    if (!columns[currentIndex]) {
+      columns[currentIndex] = [];
+      heights[currentIndex] = 0;
     }
 
-    grouped[index].push(photo);
+    const minColumn = getMinColumn(heights);
+    columns[minColumn].push(photo);
+    heights[minColumn] += photo.height;
+    console.warn(heights, minColumn);
   });
 
-  return grouped;
+  return columns;
 };

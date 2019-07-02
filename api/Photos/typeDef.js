@@ -7,6 +7,8 @@ const typeDefs = gql`
 
   type Photo {
     id: ID!
+    height: Int!
+    width: Int!
     urls: PhotoUrls
   }
 
