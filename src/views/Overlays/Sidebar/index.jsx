@@ -3,6 +3,8 @@ import React from 'react';
 import UserProfile from './UserProfile';
 import Navigation from './Navigation';
 
+import { catchEvent } from '@/utils';
+
 import style from './style.scss';
 
 const browseLinks = [
@@ -19,8 +21,8 @@ const exploreLinks = [
 const Sidebar = ({ close }) => {
   return (
     <div className={style['sidebar-container']}>
-      <div className={style.overlay} />
-      <div className={style.sidebar}>
+      <div className={style.overlay} onClick={close} />
+      <div className={style.sidebar} onClick={catchEvent}>
         <button
           data-testid="close-button"
           onClick={close}
