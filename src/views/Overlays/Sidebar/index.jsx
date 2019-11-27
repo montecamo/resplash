@@ -16,12 +16,18 @@ const exploreLinks = [
   { title: 'Developers', link: 'https://unsplash.com/developers' },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ close }) => {
   return (
     <div className={style['sidebar-container']}>
       <div className={style.overlay} />
       <div className={style.sidebar}>
-        <button className={style.close}>X</button>
+        <button
+          data-testid="close-button"
+          onClick={close}
+          className={style.close}
+        >
+          X
+        </button>
         <UserProfile className={style['profile-master']} />
         <Navigation
           className={style['navigation-master']}
