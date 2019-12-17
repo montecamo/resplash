@@ -1,12 +1,15 @@
 .home-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  margin-top: 32px;
+  padding: 36px 0 34px;
+  height: calc(100% - 32px * 2);
+  max-height: 208px;
 }
 
 .header-slogan {
-  margin-top: 20px;
+  margin: 0;
   font-size: 17px;
 }
 
@@ -15,6 +18,5 @@
   color: $white;
   padding: 14px 49px;
   font-size: 14px;
-  margin-top: 17px;
   border: 0;
 }
