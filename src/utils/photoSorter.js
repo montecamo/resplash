@@ -4,9 +4,15 @@ const getMinColumn = heights => {
   return heights.findIndex(len => len === minHeight);
 };
 
+const scalePhotoToFit = width => photo => ({
+  width,
+  height: (photo.height * width) / photo.width,
+});
+
+const FIT_WIDTH = 1000;
+
 export const sortPhotos = (photos, number = 3) => {
-  photos = photos.slice(0, 9);
-  console.warn(photos);
+  const scale = scalePhotoToFit(FIT_WIDTH);
   const columns = [];
   const heights = [];
   let currentIndex;
@@ -21,8 +27,7 @@ export const sortPhotos = (photos, number = 3) => {
 
     const minColumn = getMinColumn(heights);
     columns[minColumn].push(photo);
-    heights[minColumn] += photo.height;
-    console.warn(heights, minColumn);
+    heights[minColumn] += scale(photo).height;
   });
 
   return columns;
