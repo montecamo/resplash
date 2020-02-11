@@ -13,7 +13,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    photos: [Photo]
+    photos(page: Int): [Photo]
   }
 `;
 
