@@ -11,8 +11,8 @@ class PhotosAPI extends RESTDataSource {
     request.params.set('client_id', this.context.accessKey);
   }
 
-  async getPhotos() {
-    return this.get('photos');
+  async getPhotos(page = 1) {
+    return this.get(`photos?page=${page}`);
   }
 }
 

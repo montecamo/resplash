@@ -7,11 +7,13 @@ const typeDefs = gql`
 
   type Photo {
     id: ID!
+    height: Int!
+    width: Int!
     urls: PhotoUrls
   }
 
   type Query {
-    photos: [Photo]
+    photos(page: Int): [Photo]
   }
 `;
 

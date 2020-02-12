@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { NavLink as MockedNavLink } from 'react-router-dom';
-import { render, wait } from 'react-testing-library';
+import { render } from 'react-testing-library';
 
 import Navigation from './index';
 
@@ -17,7 +17,7 @@ test('renders successfully', () => {
   render(<Navigation title="test" items={[]} />);
 });
 
-test('renders title and NavLinks from passed props', async () => {
+test('renders title and NavLinks from passed props', () => {
   const fakeLinks = [
     { title: 'TestLink', link: 'https://test.link', exact: true },
     { title: 'TestLink2', link: 'https://test.link2', exact: false },
@@ -29,7 +29,7 @@ test('renders title and NavLinks from passed props', async () => {
 
   expect(getByText(/testtitle/i)).toBeTruthy();
 
-  await wait(() => expect(MockedNavLink).toHaveBeenCalledTimes(2));
+  expect(MockedNavLink).toHaveBeenCalledTimes(2);
   expect(MockedNavLink).toHaveBeenNthCalledWith(
     1,
     expect.objectContaining({

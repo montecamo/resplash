@@ -3,11 +3,16 @@
 }
 
 .grid-controller__item {
+  cursor: pointer;
   height: 18px;
   width: 18px;
   margin-right: 15px;
-  background: $grey;
+  background: $lightgrey;
 }
 .grid-controller__item:last-child {
   margin-right: 0;
+}
+
+.selected {
+  background: $darkgrey;
 }

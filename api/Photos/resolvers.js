@@ -1,6 +1,7 @@
 module.exports = {
   Query: {
-    photos: (root, args, { dataSources }) => dataSources.photosAPI.getPhotos(),
+    photos: (_, args, { dataSources }) =>
+      dataSources.photosAPI.getPhotos(args.page),
   },
   Photo: {
     id: ({ id }) => id,

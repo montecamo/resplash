@@ -16,6 +16,6 @@ export const OPEN_OVERLAY = gql`
 
 export const CLOSE_OVERLAY = gql`
   mutation CloseOverlay($id: ID!) {
-    openOverlay(id: $id) @client
+    closeOverlay(id: $id) @client
   }
 `;
