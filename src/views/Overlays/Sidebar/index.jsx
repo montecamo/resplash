@@ -3,6 +3,8 @@ import React from 'react';
 import UserProfile from './UserProfile';
 import Navigation from './Navigation';
 
+import { catchEvent } from '@/utils';
+
 import style from './style.scss';
 
 const browseLinks = [
@@ -16,12 +18,18 @@ const exploreLinks = [
   { title: 'Developers', link: 'https://unsplash.com/developers' },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ close }) => {
   return (
     <div className={style['sidebar-container']}>
-      <div className={style.overlay} />
-      <div className={style.sidebar}>
-        <button className={style.close}>X</button>
+      <div className={style.overlay} onClick={close} />
+      <div className={style.sidebar} onClick={catchEvent}>
+        <button
+          data-testid="close-button"
+          onClick={close}
+          className={style.close}
+        >
+          X
+        </button>
         <UserProfile className={style['profile-master']} />
         <Navigation
           className={style['navigation-master']}
