@@ -4,6 +4,8 @@ import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 
 import { sortPhotos } from '@/utils';
+import { PHOTO_GRID_PADDING } from 'constants/ui';
+
 import PhotoColumn from './PhotoColumn';
 
 import usePagination from 'hooks/usePagination';
@@ -16,12 +18,10 @@ const Grid = props => {
   const [page, setPage] = useState(1);
 
   usePagination(() => {
-    console.warn('pagination');
     setPage(page + 1);
   });
 
   useEffect(() => {
-    console.warn('load page');
     props.loadPage(page);
   }, [page]);
 
@@ -65,7 +65,10 @@ const WrappedGrid = graphql(GET_PHOTOS, {
     const { photos = [], fetchMore, variables } = props.data;
 
     return {
-      photoColumns: sortPhotos(photos, props.ownProps.rows),
+      photoColumns: sortPhotos(photos, {
+        columns: props.ownProps.rows,
+        padding: PHOTO_GRID_PADDING,
+      }),
       loadPage: page => {
         if (page === variables.page) return;
 
