@@ -5,6 +5,7 @@ import { graphql } from 'react-apollo';
 
 import { sortPhotos } from '@/utils';
 import { PHOTO_GRID_PADDING } from 'constants/ui';
+import { GRID_PAGINATION_OFFSET } from 'constants/ux';
 
 import PhotoColumn from './PhotoColumn';
 
@@ -17,9 +18,12 @@ const getColumnWidth = rows => `${+(100 / rows).toFixed(2)}%`;
 const Grid = props => {
   const [page, setPage] = useState(1);
 
-  usePagination(() => {
-    setPage(page + 1);
-  });
+  usePagination(
+    () => {
+      setPage(page + 1);
+    },
+    { threshold: GRID_PAGINATION_OFFSET },
+  );
 
   useEffect(() => {
     props.loadPage(page);
