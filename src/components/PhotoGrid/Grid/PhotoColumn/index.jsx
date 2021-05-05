@@ -13,7 +13,7 @@ const PhotoColumn = props => (
       <Photo
         className={style.photo}
         style={{
-          paddingBottom: PHOTO_GRID_PADDING,
+          marginBottom: PHOTO_GRID_PADDING,
         }}
         key={photo.id}
         src={photo.urls.regular}

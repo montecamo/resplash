@@ -26,6 +26,7 @@ const Grid = props => {
   );
 
   useEffect(() => {
+    console.warn('load page', page);
     props.loadPage(page);
   }, [page]);
 
