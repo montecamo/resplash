@@ -1,0 +1,11 @@
+FROM node:latest as build
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm i
+
+EXPOSE 4000
+
+ENTRYPOINT ["node", "api/index.js"]

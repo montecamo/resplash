@@ -7,6 +7,6 @@ COPY . .
 RUN npm i
 RUN npm run build:prod
 
-EXPOSE 80 8080 8081
+EXPOSE 80
 
-ENTRYPOINT ["node", "api/index.js"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

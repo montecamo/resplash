@@ -7,7 +7,7 @@ export const cache = new InMemoryCache();
 
 const client = new ApolloClient({
   cache,
-  uri: 'http://localhost:4000',
+  uri: 'https://resplash.montecamo.dev/api',
   typeDefs: [overlays.typeDefs],
   resolvers: [overlays.resolvers],
 });
