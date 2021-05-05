@@ -8,7 +8,7 @@ import style from './style.scss';
 
 const UserProfile = ({ name, avatar, className }) => {
   return (
-    <Link to="/u:er" className={c([style['user-profile'], className])}>
+    <Link to="/user" className={c([style['user-profile'], className])}>
       <Avatar src={avatar} className={style['avatar-master']} />
       <div className={style['user-info']}>
         <span className={style.username}>{name}</span>

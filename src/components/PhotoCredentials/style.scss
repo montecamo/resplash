@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 20px;
+}
