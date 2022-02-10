@@ -65,7 +65,7 @@
     "jest-dom": "^3.5.0",
     "jest-fetch-mock": "^2.1.2",
     "lint-staged": "^8.2.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react-testing-library": "^5.9.0",
