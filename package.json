@@ -64,7 +64,7 @@
     "jest": "^24.9.0",
     "jest-dom": "^3.5.0",
     "jest-fetch-mock": "^2.1.2",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^13.2.2",
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
